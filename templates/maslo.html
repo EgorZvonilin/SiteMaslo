@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Маслятово - Ассортимент{% endblock %}
+
+{% block content %}
+<div class="container" style="margin: 50px;">
+  <div class="display-2">
+    <span class="badge bg-primary">Ассортимент</span>
+  </div>
+</div>
+  <div class="col">
+    {% for adv in advertisements %}
+    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{% if adv.image %} {{ adv.image.url }} {% else %} {% static 'img/item.png' %} {% endif %}" class="img-fluid rounded-start" alt="Card title">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">
+              <p class="nav-link"><strong>{{ adv.title }}</strong></p>
+            </h5>
+            <p class="card-text">
+              {{ adv.description }}
+            </p>
+            <span>Цена за 100 мл: {{ adv.price }} рублей</span>
+            <p class="card-text"><small class="text-muted"></small></p>
+            <span>Цена за 250 мл: {{ adv.price2 }} рублей</span>
+            <p class="card-text"><small class="text-muted"></small></p>
+            <span>Цена за 500 мл: {{ adv.price3 }} рублей</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+<footer style="padding: 100px;" class="bg-primary">
+  <nav class="navbar navbar-expand-sm navbar-dark">
+  </nav>
+</footer>
+{% endblock %}

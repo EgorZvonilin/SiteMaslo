@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Новости - Автор{% endblock %}
+
+{% block content %}
+  <div class="container" style="margin: 50px;">
+    <div class="display-2">
+      <span class="badge bg-primary">Автор</span>
+    </div>
+  </div>
+  <div class="col offset-2">
+    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{% static 'img/Snapshot_1945.png' %}" class="img-fluid rounded-start" alt="Card title">
+        </div>
+        <div class="col">
+          <div class="card-body">
+            <h5 class="card-title">
+              <p class="nav-link"><strong>Автор</strong></p>
+            </h5>
+            <p class="card-text">
+              Егор Звонилин
+            </p>
+            <p class="card-text">
+              Телефон: 8-915-329-05-68
+            </p>
+            <p class="card-text">
+              Электронная почта: zvon13012005@gmail.com
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer style="padding: 100px;" class="bg-primary">
+    <nav class="navbar navbar-expand-sm navbar-dark">
+      <a class="navbar-brand" href="{% url 'index' %}">На Главную</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+              aria-label="Toggle navigation"></button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+               aria-expanded="false">Ссылки</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="https://web.telegram.org/k/">Телеграм (Егор Звонилин)</a>
+              <a class="dropdown-item" href="https://mail.google.com/mail/u/0/#inbox">Электронная почта (Егор Звонилин)</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </footer>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Маслятово - Написать отзыв{% endblock %}
+
+{% block content %}
+<div class="container" style="margin: 50px;">
+  <div class="display-2">
+    <span class="badge bg-primary">Написать отзыв</span>
+  </div>
+</div>
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="row mb-3">
+        <div class="col">
+          {{ form.as_p }}
+        </div>
+      </div>
+      <div class="row mb-3 offset-sm-5">
+        <div class="col">
+          <button type="submit" class="btn btn-success">Принять</button>
+        </div>
+      </div>
+    </form>
+  </div>
+<footer style="padding: 100px;" class="bg-primary">
+  <nav class="navbar navbar-expand-sm navbar-dark">
+  </nav>
+</footer>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Маслятово - Контакты{% endblock %}
+
+{% block content %}
+<div class="container" style="margin: 50px;">
+  <div class="display-2">
+    <span class="badge bg-primary">Контакты</span>
+  </div>
+</div>
+  <div class="col">
+    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{% static 'img/Snapshot_2160.png' %}" class="img-fluid rounded-start" alt="Card title">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">
+              <strong>Вы можете связаться с нами любым удобным способом</strong>
+            </h5>
+              <p class="card-text">
+                8 916 393 12 10
+              </p>
+              <a href="https://t.me/Natalya_Lun" class="nav-link">
+                <img src="{% static 'img/Snapshot_2158.png' %}" class="img-fluid rounded-start" alt="Card title">
+              </a>
+              <p class="card-text">
+                Телеграм
+              </p>
+              <a href="https://t.me/maslyatovo" class="nav-link">
+                <img src="{% static 'img/Snapshot_2158.png' %}" class="img-fluid rounded-start" alt="Card title">
+              </a>
+              <p class="card-text">
+                Канал в телеграм
+              </p>
+              <p class="card-text">
+                maslyatovo@yandex.ru
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<footer style="padding: 100px;" class="bg-primary">
+  <nav class="navbar navbar-expand-sm navbar-dark">
+  </nav>
+</footer>
+{% endblock %}

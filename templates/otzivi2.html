@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Маслятово - Отзывы{% endblock %}
+
+{% block content %}
+<div class="container" style="margin: 50px;">
+  <div class="display-2">
+    <span class="badge bg-primary">Отзывы</span>
+  </div>
+</div>
+  <div class="col">
+    {% for otz in otzivi %}
+    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+      <div class="row g-0">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">
+              <p class="nav-link"><strong>{{ otz.title }}</strong></p>
+            </h5>
+            <p class="card-text">
+              {{ otz.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+<footer style="padding: 100px;" class="bg-primary">
+  <nav class="navbar navbar-expand-sm navbar-dark">
+  </nav>
+</footer>
+{% endblock %}

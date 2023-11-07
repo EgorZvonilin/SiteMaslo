@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Маслятово - Главная{% endblock %}
+
+{% block content %}
+<div class="container" style="margin: 50px;">
+  <div class="display-2">
+    <span class="badge bg-primary">Маслятово</span>
+  </div>
+</div>
+  <div class="col">
+    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+            <img src="{% static 'img/Snapshot_2159.png' %}" class="img-fluid rounded-start" alt="Card title">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">
+              <strong>Сыродавленное масло</strong>
+            </h5>
+              <p class="card-text">
+                  Часто ли мы задумываемся о том, что едим, о том, как те или иные продукты влияют на наше самочувствие? Наше здоровье (и нездоровье тоже) начинается с кухни. Тенденция такова, что большинство продаваемого на полках масс-маркетов несёт большой вред здоровью.
+              </p>
+              <p class="card-text">
+                  Несколько лет назад наша семья переехала жить загород. Еще раньше я задумывалась о вреде обычного растительного масла и для салатов старалась покупать различные другие масла, но все это был продукт из магазина, с большим сроком годности. Льняное масло горчило, и совершенно не нравилось по вкусу, на горчичном невозможно было жарить из-за его запаха. Переехав за город мы решили купить пресс и начать делать масло для себя. Это масло значительно отличалось по вкусу и аромату от покупаемого ранее. Постепенно наше хобби переросло в небольшое семейное дело - мы давим 100% натуральный продукт - сыродавленное масло.
+              </p>
+              <p class="card-text">
+                  Будем рады, если и Вы попробуйте наше масло!
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<footer style="padding: 100px;" class="bg-primary">
+  <nav class="navbar navbar-expand-sm navbar-dark">
+  </nav>
+</footer>
+{% endblock %}
